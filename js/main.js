@@ -14,6 +14,18 @@
 
 const row = document.querySelector('.row');
 console.log('row', row, typeof row);
+
+// Prendo il body dall'HTML per aggiungere dello stile
+
+const body = document.querySelector('body');
+body.classList.add('bg-dark');
+
+//  Prendo il titolo dall'HTML per aggiungere dello stile
+
+const title = document.querySelector('h1');
+title.classList.add('text-center', 'text-warning');
+
+
 // 1) Scrivere un programma che stampi in console i numeri da 1 a 100;
 
 for (let i = 1; i <= 100; i++) {
@@ -27,10 +39,13 @@ for (let i = 1; i <= 100; i++) {
 
     col.classList.add('col');
 
-
     // Creo all'interno dell'elemento un piccolo contenitore per i numeri
 
     const card = document.createElement('div');
+
+    // Prendo il piccolo contenitore e gli aggiungo dello stile
+
+    card.classList.add('square', 'text-white','text-center', 'align-middle', 'm-5');
 
     // "Appendo" il contenitore all'elemento
 
@@ -48,6 +63,10 @@ for (let i = 1; i <= 100; i++) {
         // "Appendo" la stampa al piccolo contenitore
 
         card.append('FizzBuzz');
+
+        // Aggiunto dello stile al piccolo contenitore a seconda della condizione
+
+        card.classList.add('bg-warning', 'bg-gradient')
         console.log('FizzBuzz', i, typeof i);
     }
 
@@ -58,6 +77,10 @@ for (let i = 1; i <= 100; i++) {
         // "Appendo" la stampa al piccolo contenitore
 
         card.append('Fizz');
+
+        // Aggiunto dello stile al piccolo contenitore a seconda della condizione
+        
+        card.classList.add('bg-primary', 'bg-gradient')
         console.log('Fizz', i, typeof i);
     }
 
@@ -68,6 +91,10 @@ for (let i = 1; i <= 100; i++) {
         // "Appendo" la stampa al piccolo contenitore
 
         card.append('Buzz');
+
+        // Aggiunto dello stile al piccolo contenitore a seconda della condizione
+        
+        card.classList.add('bg-success', 'bg-gradient')
         console.log('Buzz', i, typeof i);
     }
 
@@ -78,6 +105,10 @@ for (let i = 1; i <= 100; i++) {
         // "Appendo" la stampa al piccolo contenitore
 
         card.append(i);
+
+        // Aggiunto dello stile al piccolo contenitore a seconda della condizione
+        
+        card.classList.add('bg-secondary', 'bg-gradient')
         console.log('i', i, typeof i);
     }
 
